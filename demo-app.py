@@ -3,18 +3,12 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import plotly.express as px
-from streamlit_autorefresh import st_autorefresh
 from statsmodels.stats.power import NormalIndPower
 import os
 
 
 st.set_page_config(page_title="A/B Test Dashboard", layout="wide")
 st.title("A/B Test Dashboard")
-
-
-refresh_interval = st.sidebar.slider("Auto Refresh Interval (seconds)", 0, 60, 10)
-if refresh_interval > 0:
-    st_autorefresh(interval=refresh_interval * 1000, key="dashboard_refresh")
 
 # Power analysis helper
 def compute_required_sample(ctr_control=0.08, min_lift=0.02, alpha=0.05, power=0.8):
