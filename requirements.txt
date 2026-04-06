@@ -1,0 +1,10 @@
+streamlit
+dvc
+pandas
+numpy
+mlflow
+scipy
+statsmodels
+scikit-learn
+plotly
+streamlit-autorefresh

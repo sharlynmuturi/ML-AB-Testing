@@ -1,0 +1,27 @@
+{
+  "experiment_id": "exp_model_ab_v1",
+  "n_users": 10000,
+  "variant_split": {
+    "control": 0.5,
+    "treatment": 0.5
+  },
+  "model_config": {
+    "control": {
+      "model_version": "logreg_v1",
+      "ctr": 0.08,
+      "latency_mean": 35
+    },
+    "treatment": {
+      "model_version": "gboost_v2",
+      "ctr": 0.10,
+      "latency_mean": 45
+    }
+  },
+  "paths": {
+    "raw_out": "data/raw/event_logs.csv",
+    "metrics_out": "data/processed/experiment_metrics.csv",
+    "checkpoint_ts": "data/checkpoints/last_ts.json",
+    "seen_users": "data/checkpoints/seen_users.csv",
+    "run_counter": "data/checkpoints/sim_run_id.txt"
+  }
+}
